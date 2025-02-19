@@ -1,7 +1,7 @@
 var canvas = document.getElementById('wrapper-canvas')
 
 var dimensions = {
-  width: window.innerWidth,
+  width: window.innerWidth-20,
   height: window.innerHeight,
 }
 
