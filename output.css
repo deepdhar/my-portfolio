@@ -563,8 +563,14 @@
   .top-5 {
     top: calc(var(--spacing) * 5);
   }
+  .top-10 {
+    top: calc(var(--spacing) * 10);
+  }
   .top-11 {
     top: calc(var(--spacing) * 11);
+  }
+  .top-20 {
+    top: calc(var(--spacing) * 20);
   }
   .-right-3 {
     right: calc(var(--spacing) * -3);
@@ -725,11 +731,17 @@
   .h-\[22px\] {
     height: 22px;
   }
+  .h-\[90vh\] {
+    height: 90vh;
+  }
   .h-screen {
     height: 100vh;
   }
   .max-h-\[80vh\] {
     max-height: 80vh;
+  }
+  .max-h-\[90vh\] {
+    max-height: 90vh;
   }
   .w-4 {
     width: calc(var(--spacing) * 4);
@@ -1049,6 +1061,9 @@
   }
   .pt-6 {
     padding-top: calc(var(--spacing) * 6);
+  }
+  .pt-20 {
+    padding-top: calc(var(--spacing) * 20);
   }
   .pb-8 {
     padding-bottom: calc(var(--spacing) * 8);
@@ -1548,6 +1563,11 @@
       }
     }
   }
+  .md\:top-0 {
+    @media (width >= 48rem) {
+      top: calc(var(--spacing) * 0);
+    }
+  }
   .md\:-right-7 {
     @media (width >= 48rem) {
       right: calc(var(--spacing) * -7);
@@ -1593,9 +1613,19 @@
       height: 180px;
     }
   }
+  .md\:h-auto {
+    @media (width >= 48rem) {
+      height: auto;
+    }
+  }
   .md\:h-full {
     @media (width >= 48rem) {
       height: 100%;
+    }
+  }
+  .md\:max-h-auto {
+    @media (width >= 48rem) {
+      max-height: auto;
     }
   }
   .md\:w-2\/3 {
@@ -1656,6 +1686,11 @@
   .md\:py-10 {
     @media (width >= 48rem) {
       padding-block: calc(var(--spacing) * 10);
+    }
+  }
+  .md\:pt-0 {
+    @media (width >= 48rem) {
+      padding-top: calc(var(--spacing) * 0);
     }
   }
   .md\:pt-16 {
