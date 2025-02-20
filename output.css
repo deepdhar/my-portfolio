@@ -728,6 +728,9 @@
   .h-screen {
     height: 100vh;
   }
+  .max-h-\[80vh\] {
+    max-height: 80vh;
+  }
   .w-4 {
     width: calc(var(--spacing) * 4);
   }
@@ -881,6 +884,9 @@
   }
   .self-center {
     align-self: center;
+  }
+  .overflow-y-auto {
+    overflow-y: auto;
   }
   .rounded {
     border-radius: 0.25rem;
