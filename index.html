@@ -156,9 +156,9 @@
         </div>
         <div class="hidden sm:block">
           <div class="pointer-events-auto flex gap-15">
-            <button class="text-[gray] hover:text-white cursor-pointer text-lg">About</button>
-            <button onclick="goToProjects()" class="text-[gray] hover:text-white cursor-pointer text-lg">Projects</button>
-            <button onClick="goToContact()" class="text-[gray] hover:text-white cursor-pointer text-lg">Contact</button>
+            <button id="about-header" class="text-[gray] hover:text-white cursor-pointer text-lg">about</button>
+            <button onclick="goToProjects()" class="text-[gray] hover:text-white cursor-pointer text-lg">projects</button>
+            <button onClick="goToContact()" class="text-[gray] hover:text-white cursor-pointer text-lg">contact</button>
           </div>
         </div>
       </header>
@@ -213,7 +213,8 @@
               MERN Stack Developer
             </p>
             <button
-              class="bg-[#4595eb] py-2 px-5 rounded font-extrabold bg-gradient-to-l from-[#1595b6] to-[#1f2667e6] relative hover:scale-110 ease-in-out duration-250 group"
+              id="openModal"
+              class="bg-[#4595eb] py-1 md:py-2 px-3 md:px-5 rounded font-extrabold bg-gradient-to-l from-[#1595b6] to-[#1f2667e6] relative hover:scale-110 ease-in-out duration-250 group"
             >
               About Me
               <svg
@@ -230,7 +231,7 @@
                 width="44"
                 height="44"
                 viewBox="0 0 100 100"
-                class="absolute top-1/2 -translate-y-1/2 -right-7 group-hover:-right-9"
+                class="absolute top-1/2 -translate-y-1/2 -right-4 md:-right-7 group-hover:-right-9 w-[22px] md:w-[44px] h-[22px] md:h-[44px]"
               >
                 <g transform="translate(0,-952.36218)">
                   <path
@@ -382,11 +383,62 @@
           </svg>
         </button>
       </div>
+
+      <!-- Popup Modal -->
+      <div id="aboutMeModal" class="fixed inset-0 flex justify-center items-center hidden z-10">
+        <div class="bg-[#141414] text-white px-10 md:px-20 lg:px-30 py-10 md:py-10 lg:py-15 rounded-lg shadow-lg w-11/12 md:w-2/3 lg:1/2 relative flex flex-col md:flex-row items-center">
+          <!-- Left Contect -->
+          <div class="order-2 sm:order-1 lg:pr-5">
+            <button id="closeModal" class="absolute top-4 right-4 text-3xl">&times;</button>
+            
+            <h2 class="text-xl md:text-4xl font-['Sora'] font-semibold text-blue-400 mb-4">ABOUT ME</h2>
+            <p class="mb-4 text-sm md:text-lg font-['Nunito']">
+                Experienced for 2.6+ years in the industry, my unique skills and creating thinking will help you build
+                fast and scallable web apps and mobile apps that fit your vision and attract users more than usual
+                and grow your business.
+                Technologies and tools that I use to create such awesome websites:
+            </p>
+
+            <div class="flex flex-wrap gap-2">
+                <span class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base">#javascript</span>
+                <span class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base">#react.js</span>
+                <span class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base">#redux</span>
+                <span class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base">#node.js</span>
+                <span class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base">#typescript</span>
+                <span class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base">#express.js</span>
+                <span class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base">#mongoDB</span>
+                <span class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base">#tailwind</span>
+                <span class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base">#git</span>
+                <span class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base">#aws</span>
+                <span class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base">#html</span>
+                <span class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base">#css</span>
+                <span class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base">#java</span>
+                <!-- Add more as needed -->
+            </div>
+            
+            <h3 class="text-lg font-bold text-blue-400 mt-8 md:mt-16">MERN STACK</h3>
+            <div class="flex gap-8 mt-10">
+                <img src="./assets/icons/mongodb.svg" alt="MongoDB" class="h-8 md:h-10 sm:hover:scale-130 ease-in-out duration-200">
+                <img src="./assets/icons/express.svg" alt="Express.js" class="h-8 md:h-10 sm:hover:scale-130 ease-in-out duration-200">
+                <img src="./assets/icons/react.svg" alt="React.js" class="h-8 md:h-10 sm:hover:scale-130 ease-in-out duration-200">
+                <img src="./assets/icons/node.svg" alt="Node.js" class="h-8 md:h-10 sm:hover:scale-130 ease-in-out duration-200">
+            </div>
+          </div>
+          <!-- Right content -->
+          <div class="order-1 sm:order-2 lg:pl-30 lg:pt-15 lg:pb-15 mb-10 sm:mb-0">
+            <img 
+              src="./assets/images/about.webp" 
+              alt=""
+              class="w-50 md:w-full h-50 md:h-full lg:w-full lg:h-full object-cover shadow-lg"
+            >
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="projects" class="max-w-screen-xl mx-auto px-4 relative pb-8 sm:pb-16">
       <h2
-        class="text-3xl sm:text-[40px] font-bold px-4 py-2 w-max mx-auto text-center text-[#1788ae] sm:border-b-2 border-[#1788ae] bg-[#111] relative z-10"
+        class="text-3xl sm:text-[35px] font-bold px-4 py-2 w-max mx-auto text-center text-[#1788ae] font-['Merriweather'] sm:border-b-2 border-[#1788ae] bg-[#111] relative z-10"
       >
         Latest Works
       </h2>
@@ -460,7 +512,7 @@
         </div>
       </div>
 
-      <div class="h-15"></div>
+      <div class="h-8"></div>
 
       <!-- Second project -->
       <div class="flex flex-col sm:flex-row gap-4 mt-12 sm:gap-[80px] items-center sm:mt-20 relative">
@@ -530,7 +582,7 @@
         </a>
       </div>
 
-      <div class="h-15"></div>
+      <div class="h-8"></div>
 
       <!-- Third project -->
       <div class="flex flex-col sm:flex-row gap-4 sm:gap-[80px] items-center mt-8 sm:mt-20 relative">
@@ -599,7 +651,7 @@
         </div>
       </div>
 
-      <div class="h-15"></div>
+      <div class="h-8"></div>
 
       <!-- Fourth project -->
       <div class="flex flex-col sm:flex-row gap-4 sm:gap-[80px] items-center mt-8 sm:mt-20 relative">
@@ -777,7 +829,7 @@
 
     <section id="contact" class="max-w-screen-xl mx-auto px-4 pb-12">
         <h2
-          class="text-3xl sm:text-[40px] bg-[#111] relative z-10 font-bold px-4 py-2 w-max mx-auto text-center text-[#1788ae] sm:border-2 border-[#1788ae] rounded-md"
+          class="text-3xl sm:text-[30px] bg-[#111] relative z-10 font-bold px-4 py-2 w-max mx-auto text-center text-[#1788ae] sm:border-2 border-[#1788ae] font-['Merriweather'] rounded-md"
         >
           Let's Connect
         </h2>
@@ -785,7 +837,8 @@
           <div class="w-full">
             <img src="./assets/images/contact-me.svg" alt="phone" />
           </div>
-          <form class="w-full" name="contactUS" netlify>
+          <form action="https://getform.io/f/amdkkmzb"
+            method="post" class="w-full">
             <label
               for="name"
               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"

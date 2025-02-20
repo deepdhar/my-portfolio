@@ -1,3 +1,7 @@
+let openModalBtn = document.getElementById("openModal");
+let closeModalBtn = document.getElementById("closeModal");
+let aboutMeModal = document.getElementById("aboutMeModal");
+let aboutHeader = document.getElementById('about-header');
 
 function topFunction() {
     document.body.scrollTop = 0; // For Safari
@@ -16,6 +20,40 @@ function goToContact() {
     let contactSection = document.getElementById('contact');
     contactSection.scrollIntoView();
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    if (openModalBtn && closeModalBtn && aboutMeModal) {
+        openModalBtn.addEventListener("click", () => {
+            aboutMeModal.classList.remove("hidden");
+            document.body.classList.add("no-scroll");
+        });
+
+        aboutHeader.addEventListener("click", ()=> {
+            aboutMeModal.classList.remove("hidden");
+            document.body.classList.add("no-scroll");
+        })
+
+        closeModalBtn.addEventListener("click", () => {
+            aboutMeModal.classList.add("hidden");
+            document.body.classList.remove("no-scroll");
+        });
+
+        // Close modal when clicking outside the content box
+        aboutMeModal.addEventListener("click", (event) => {
+            if (event.target === aboutMeModal) {
+                aboutMeModal.classList.add("hidden");
+            }
+        });
+    }
+});
+
+// window.addEventListener("click", (event) => {
+//     if (event.target === aboutMeModal) {
+//         aboutMeModal.classList.add("hidden");
+//         document.body.classList.remove("no-scroll");
+//     }
+// });
 
 function updateTime() {
     const timeElement = document.getElementById("time");
