@@ -1065,6 +1065,15 @@
   .pt-20 {
     padding-top: calc(var(--spacing) * 20);
   }
+  .pt-30 {
+    padding-top: calc(var(--spacing) * 30);
+  }
+  .pt-40 {
+    padding-top: calc(var(--spacing) * 40);
+  }
+  .pt-50 {
+    padding-top: calc(var(--spacing) * 50);
+  }
   .pb-8 {
     padding-bottom: calc(var(--spacing) * 8);
   }
