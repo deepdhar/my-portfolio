@@ -26,17 +26,14 @@ document.addEventListener("DOMContentLoaded", function () {
     if (openModalBtn && closeModalBtn && aboutMeModal) {
         openModalBtn.addEventListener("click", () => {
             aboutMeModal.classList.remove("hidden");
-            document.body.classList.add("no-scroll");
         });
 
         aboutHeader.addEventListener("click", ()=> {
             aboutMeModal.classList.remove("hidden");
-            document.body.classList.add("no-scroll");
         })
 
         closeModalBtn.addEventListener("click", () => {
             aboutMeModal.classList.add("hidden");
-            document.body.classList.remove("no-scroll");
         });
 
         // Close modal when clicking outside the content box
