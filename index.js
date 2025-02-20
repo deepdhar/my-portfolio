@@ -25,15 +25,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (openModalBtn && closeModalBtn && aboutMeModal) {
         openModalBtn.addEventListener("click", () => {
-            aboutMeModal.classList.remove("hidden");
+            aboutMeModal.classList.remove("opacity-0", "scale-90", "invisible");
+            aboutMeModal.classList.add("opacity-100", "scale-100", "visible");
         });
 
         aboutHeader.addEventListener("click", ()=> {
-            aboutMeModal.classList.remove("hidden");
+            aboutMeModal.classList.remove("opacity-0", "scale-90", "invisible");
+            aboutMeModal.classList.add("opacity-100", "scale-100", "visible");
         })
 
         closeModalBtn.addEventListener("click", () => {
-            aboutMeModal.classList.add("hidden");
+            aboutMeModal.classList.remove("opacity-100", "scale-100", "visible");
+            aboutMeModal.classList.add("opacity-0", "scale-90", "invisible");
         });
 
         // Close modal when clicking outside the content box
